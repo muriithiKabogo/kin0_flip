@@ -1,0 +1,10 @@
+<% if @results.any? %>
+  <h3>Search results (<%= @total_results %>):</h3>
+  <ol>
+  <% @results.each do |movie| %>
+    <li><%= movie.name %> (<%= movie.rating_avg %>)</li>
+  <% end %>
+  </ol>
+<% else %>
+  Results not found :(
+<% end %>
